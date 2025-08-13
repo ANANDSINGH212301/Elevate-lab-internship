@@ -1,106 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Counter with Local Storage</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      margin-bottom: 30px;
-    }
-    .container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .color-box {
-      width: 150px;
-      height: 150px;
-      border-radius: 10px;
-    }
-    .card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    button {
-      margin-top: 10px;
-      padding: 8px 15px;
-      border: none;
-      background: #333;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #555;
-    }
-    .counter {
-      margin-top: 5px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Static Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Color Counter</h1>
-  <div class="container">
-    <div class="card">
-      <div class="color-box" style="background:rgb(255, 194, 204);"></div>
-      <button onclick="incrementCounter('pink')">Click Me</button>
-      <div class="counter" id="pink-counter">0</div>
-    </div>
-    <div class="card">
-      <div class="color-box" style="background:yellow;"></div>
-      <button onclick="incrementCounter('yellow')">Click Me</button>
-      <div class="counter" id="yellow-counter">0</div>
-    </div>
-    <div class="card">
-      <div class="color-box" style="background:rgb(94, 239, 94);"></div>
-      <button onclick="incrementCounter('green')">Click Me</button>
-      <div class="counter" id="green-counter">0</div>
-    </div>
-    <div class="card">
-      <div class="color-box" style="background:rgb(161, 161, 255);"></div>
-      <button onclick="incrementCounter('blue')">Click Me</button>
-      <div class="counter" id="blue-counter">0</div>
-    </div>
-    <div class="card">
-      <div class="color-box" style="background:rgb(229, 128, 128);"></div>
-      <button onclick="incrementCounter('red')">Click Me</button>
-      <div class="counter" id="red-counter">0</div>
-    </div>
-  </div>
+    <!-- Header -->
+    <header>
+        <h1>🌐 My Interactive Website</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+            <button id="themeToggle">🌙 Dark Mode</button>
+        </nav>
+    </header>
 
-  <script>
-    const colors = ["pink", "yellow", "green", "blue", "red"];
-    const counters = {};
+    <!-- Real-Time Clock -->
+    <div id="clock"></div>
 
-    // Load saved counts from localStorage
-    colors.forEach(color => {
-      const savedCount = localStorage.getItem(`counter-${color}`);
-      counters[color] = savedCount ? parseInt(savedCount, 10) : 0;
-      document.getElementById(`${color}-counter`).textContent = counters[color];
-    });
+    <!-- Main Content -->
+    <main>
+        <section id="about">
+            <h2>About This Site</h2>
+            <p>This is a simple yet interactive static website using only HTML, CSS, and JavaScript — no frameworks.</p>
+        </section>
 
-    function incrementCounter(color) {
-      counters[color]++;
-      document.getElementById(`${color}-counter`).textContent = counters[color];
-      localStorage.setItem(`counter-${color}`, counters[color]);
-    }
-  </script>
+        <section id="features">
+            <h2>Cool Features</h2>
+            <ul>
+                <li>🌙 Dark/Light mode toggle</li>
+                <li>🕒 Real-time digital clock</li>
+                <li>💬 Random quote generator</li>
+                <li>⬆ Smooth scroll-to-top button</li>
+            </ul>
+            <button id="quoteBtn">Generate Quote</button>
+            <p id="quoteDisplay"></p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: example@email.com</p>
+        </section>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn">⬆</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 My Interactive Website | Built with ❤️ in HTML, CSS, JS</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
