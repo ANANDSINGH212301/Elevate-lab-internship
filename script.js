@@ -14,7 +14,6 @@ document.getElementById("themeToggle").addEventListener("click", () => {
     btn.textContent = document.body.classList.contains("dark") ? "☀ Light Mode" : "🌙 Dark Mode";
 });
 
-// Quote Generator
 const quotes = [
     "Believe you can and you're halfway there.",
     "Do something today that your future self will thank you for.",
