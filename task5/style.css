@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background: linear-gradient(45deg, #4CAF50, #2E8B57);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+#themeToggle {
+    background: white;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#clock {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+/* Dark Mode */
+.dark {
+    background: #222;
+    color: white;
+}
+
+.dark header {
+    background: linear-gradient(45deg, #555, #111);
+}
+
+.dark footer {
+    background: #111;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
